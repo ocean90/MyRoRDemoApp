@@ -3,6 +3,7 @@ class Item < ActiveRecord::Base
 	scope :available2, where( 'rating > 2' )
 
 	belongs_to :user
+	has_many :lendings
 
 	attr_accessible :name, :rating, :description, :user_id
 	validates_length_of :name, :minimum=>1

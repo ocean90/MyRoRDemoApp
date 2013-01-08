@@ -1,0 +1,33 @@
+%h1 Listing items
+%table
+  %tr
+    %th
+      Objekt
+    %th
+      Von
+    %th
+      Ausgeliehen am
+    %th
+      Zurückgebracht am
+    %th
+    %th
+    %th
+  - @lendings.each do |lending|
+    %tr
+      %td
+        = lending.item.name
+      %td
+        = lending.user.username
+      %td
+        = lending.lending_start
+      %td
+        = lending.lending_end
+      %td
+        = link_to 'Show', lending
+      %td
+        = link_to 'Edit', edit_lending_path(lending)
+      %td
+        = link_to 'Destroy', lending, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New Leading', new_lending_path
+= link_to 'New User', new_user_path

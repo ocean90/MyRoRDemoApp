@@ -1,9 +1,13 @@
 MyApp::Application.routes.draw do
+  resources :lendings
+
+
   resources :users
 
 
   resources :items
 
+  root :to => 'items#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

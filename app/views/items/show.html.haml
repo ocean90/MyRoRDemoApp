@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Name:
+  %p= @item.name
+  %b Description
+  %p= @item.description
+  %b Rating
+  %p= @item.rating
+  %b User ID
+  %p= @item.user_id
+= link_to 'Edit', edit_item_path(@item)
+
+\#{link_to 'Back', items_path}
