@@ -67,3 +67,50 @@ div {
     list-style: square;
   }
 }
+
+// MY STUFF
+$green: #92c590;
+
+body {
+  background: image-url('bg.png');
+  font: 12px/1.2 sans-serif;
+}
+
+.header {
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+
+  h1 a {
+    font-size: 40px;
+    color: $green;
+    text-shadow: -3px 0 4px;
+    text-decoration: none;
+
+    &:hover {
+      background: none;
+      color: lighten( $green, 10% );
+    }
+  }
+}
+
+.content {
+  margin: 0 auto;
+  padding: 10px;
+  width: 500px;
+  background: #fff;
+}
+
+
+nav li {
+  list-style: none;
+  display: inline;
+}
+
+nav li:after {
+  content: '/'
+}
+
+nav li:last-child:after {
+  content: none
+}

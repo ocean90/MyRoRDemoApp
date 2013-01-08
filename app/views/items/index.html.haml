@@ -2,9 +2,9 @@
 %table
   %tr
     %th Name
-    %th Desc
-    %th Rating
-    %th User ID
+    %th Beschreibung
+    %th Berwertung
+    %th Besitzer
     %th
     %th
     %th
@@ -13,7 +13,7 @@
       %td= item.name
       %td= item.description
       %td= item.rating
-      %td= item.user_id
+      %td= item.user.username
       %td= link_to 'Show', item
       %td= link_to 'Edit', edit_item_path(item)
       %td= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }
