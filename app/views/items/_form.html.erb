@@ -19,7 +19,7 @@
     <p><%= f.label :rating %><br />
     <%= f.text_field :rating %>
     <p><%= f.label :user_id %><br />
-    <%=  f.select("item", "user_id", User.all.collect {|p| [ p.username, p.id ] }, {:include_blank => 'None'}) %>
+    <%= select("item", "user_id", User.all.collect {|p| [ p.username, p.id ] }, {:include_blank => 'None'}) %>
 
   </div>
   <div class="actions">
